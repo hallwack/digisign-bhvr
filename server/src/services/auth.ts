@@ -1,6 +1,6 @@
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { Lucia } from "lucia";
-import { serverEnvs } from "shared/src/env/server";
+import { serverEnvs } from "shared/dist";
 
 import { db } from "@server/services/db";
 import { sessionTable, userTable } from "@server/services/db/schema";
