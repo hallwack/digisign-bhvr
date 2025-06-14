@@ -5,6 +5,7 @@ export const clientEnvs = createEnv({
   clientPrefix: "VITE_",
   client: {
     VITE_PUBLIC_DOMAIN: z.string().default("http://localhost:5173"),
+    VITE_SERVER_URL: z.string().default("http://localhost:3000"),
   },
   runtimeEnv: import.meta.env,
   emptyStringAsUndefined: true,
