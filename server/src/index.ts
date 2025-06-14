@@ -4,6 +4,7 @@ import { cors } from "hono/cors";
 import { requestId } from "hono/request-id";
 
 import { authApp } from "@server/routes/auth";
+import { testApp } from "@server/routes/test";
 import { lucia } from "@server/services/auth";
 import { db } from "@server/services/db";
 import type { ContextVariables } from "@server/types";
@@ -59,7 +60,7 @@ app.doc31("/api/swagger.json", {
   },
 });
 
-const routes = app.route("/", authApp);
+const routes = app.route("/", testApp).route("/", authApp);
 /* .route("/", documentsApp)
   .route("/", keysApp); */
 
