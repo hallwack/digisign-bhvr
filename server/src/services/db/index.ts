@@ -1,8 +1,8 @@
 import { type PostgresJsDatabase, drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
-import { serverEnvs } from "shared/dist";
 
 import * as schema from "@server/services/db/schema";
+import { serverEnvs } from "@server/utils/env";
 
 declare global {
   var globalDb: PostgresJsDatabase<typeof schema> | undefined;

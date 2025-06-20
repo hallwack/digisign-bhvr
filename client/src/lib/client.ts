@@ -1,5 +1,6 @@
 import { hcWithType } from "server/src/client";
-import { clientEnvs } from "shared/dist";
+
+import { clientEnvs } from "@/lib/env";
 
 const SERVER_URL = clientEnvs.VITE_SERVER_URL || "http://localhost:6969";
 
